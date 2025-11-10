@@ -1,0 +1,164 @@
+
+
+.chatContainer {
+  display: flex;
+  height: 100vh;
+  position: relative; /* Permet de positionner le slider de langue */
+}
+
+.languageSlider {
+  position: absolute;
+  
+ /* Position à droite */
+  display: flex;
+  background-color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.languageOption {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.languageOption:hover {
+  background-color: #f0f0f0;
+}
+
+.activeLanguage {
+  background-color: #654fdf;
+  color: #fff;
+}
+
+.sidebar {
+  width: 300px;
+  flex: 0 0 auto;
+  background-color: #f3f3fd;
+  padding: 20px;
+  border-right: 1px solid #cccccc;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatTitle {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 24px;
+  color: #654fdf;
+}
+.chatdate {
+  text-align: center;
+  font-size: 16px;
+  color: #654fdf;
+}
+
+.deleteIcon {
+  width: 20px; /* Ajustez la taille selon vos besoins */
+  height: 20px;
+  cursor: pointer; /* Définissez un curseur pour indiquer l'interaction */
+  margin-left: auto; /* Espacement à gauche pour séparer l'icône du texte */
+  margin-top: -20px;
+}
+
+.messagesContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fcfbfb;
+  display: flex;
+  flex-direction: column; /* Affiche les messages de haut en bas */
+  gap: 10px; /* Espacement entre les messages */
+}
+
+.message {
+  display: inline-block; /* Utilisation d'inline-block pour que chaque bulle s'adapte à la longueur du contenu */
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  max-width: 60%; /* Augmentez la largeur maximum pour permettre une plus grande adaptabilité */
+  word-wrap: break-word; /* Permet le retour à la ligne lorsque le contenu dépasse la largeur max */
+}
+
+.userMessage {
+  align-self: flex-end;
+  background-color: #654fdf;
+  color: white;
+  margin-left: auto; /* Assure que les messages de l'utilisateur soient alignés à droite */
+}
+
+.botMessage {
+  align-self: flex-start;
+  background-color: #e9ecef;
+  color: #333;
+  margin-right: auto; /* Assure que les messages du bot soient alignés à gauche */
+}
+
+.inputContainer {
+  display: flex;
+  margin-top: 20px;
+}
+
+.inputContainer input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.inputContainer input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.inputContainer button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  background-color: #654fdf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.inputContainer button:hover {
+  background-color: #654fdf;
+}
+
+.historyList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.historyItem {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.historyItem:hover {
+  background-color: #e9ecef;
+}
+
+/* Styles for Navigation component are assumed to be defined elsewhere */

@@ -8,6 +8,8 @@ export interface UserInterface {
   phoneNumber: string | null;
   photoURL: string | null;
   userDocument?: UserDocument;
+  Message?: string;
+  comments?:string;
 }
 
 export interface UserDocument {
@@ -15,9 +17,29 @@ export interface UserDocument {
   email: string;
   how_did_her: string;
   creation_date: Timestamp;
-  onboardingIsCompleted:boolean;
-  displayName:string;
-  expertise:string;
-  biography:string;
+  onboardingIsCompleted: boolean;
+  displayName: string;
+  expertise: string;
+  biography: string;
   photoURL: string | null;
+  Message: string;
+  comments?:string;
+}
+
+export interface Post {
+  id: string;
+  userId: string;
+  authorName: string;
+  authorPhoto: string;
+  text: string;
+  timestamp: Timestamp;
+}
+
+export interface Comment {
+  id: string;
+  userId: string;
+  authorName: string;
+  authorPhoto: string;
+  text: string;
+  timestamp: Timestamp;
 }

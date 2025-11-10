@@ -1,6 +1,6 @@
 import useFirebaseAuth from "@/hooks/use-firebase-auth";
 import { UserDocument } from "@/types/user";
-import { useContext ,createContext} from "react";
+import { useContext, createContext } from "react";
 
 const init = {
   uid: "",
@@ -10,41 +10,42 @@ const init = {
   phoneNumber: "",
   photoURL: "",
   userDocument: {} as UserDocument,
+  Message: "",
 };
 
 const authUserContext = createContext({
-    authUser: init,
-    authUserIsLoading: true,
-    reloadAuthUserData:() => {}
-  });
-  
-  interface Props {
-    children: React.ReactNode;
-  }
-  
-  export function AuthUserProvider({ children }: Props) {
-    const auth = useFirebaseAuth();
-  
-    return (
-      <authUserContext.Provider
-        value={{
-          authUser: auth.authUser as {
-            uid: string;
-            email: string;
-            displayName: string;
-            emailVerified: boolean;
-            phoneNumber: string;
-            photoURL: string;
-            userDocument: UserDocument;
-          },
-          authUserIsLoading: auth.authUserIsLoading,
-          reloadAuthUserData:auth.reloadAuthUserData,
-        }}
-      >
-        {children}
-      </authUserContext.Provider>
-    );
-  }
-  
-  export const useAuth = () => useContext(authUserContext);
-  
+  authUser: init,
+  authUserIsLoading: true,
+  reloadAuthUserData: () => {},
+});
+
+interface Props {
+  children: React.ReactNode;
+}
+
+export function AuthUserProvider({ children }: Props) {
+  const auth = useFirebaseAuth();
+
+  return (
+    <authUserContext.Provider
+      value={{
+        authUser: auth.authUser as {
+          uid: string;
+          email: string;
+          displayName: string;
+          emailVerified: boolean;
+          phoneNumber: string;
+          photoURL: string;
+          userDocument: UserDocument;
+          Message: string;
+        },
+        authUserIsLoading: auth.authUserIsLoading,
+        reloadAuthUserData: auth.reloadAuthUserData,
+      }}
+    >
+      {children}
+    </authUserContext.Provider>
+  );
+}
+
+export const useAuth = () => useContext(authUserContext);

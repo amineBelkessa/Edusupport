@@ -11,8 +11,7 @@ interface Props {}
 
 export const Navigation = ({}: Props) => {
   const {authUser} = useAuth();
-  console.log("authUser",authUser);
-  
+ 
   const authentificationSystem = (
     <div className="flex items-center gap-2">
             <Button baseUrl="/connexion" size="small">Connexion</Button>
@@ -44,10 +43,11 @@ export const Navigation = ({}: Props) => {
             component="div"
             className="flex items-center gap-7"
           >
+             <ActiveLink href="/ChatPage"> EduBot</ActiveLink>
             <ActiveLink href="/design-system"> Ressources</ActiveLink>
-            <ActiveLink href="/design-system"> Planification</ActiveLink>
-            <ActiveLink href="/design-system"> Communauté</ActiveLink>
-            <ActiveLink href="/contacts"> Contacts</ActiveLink>
+            <ActiveLink href="/calendirie/calendar"> Planification</ActiveLink>
+            <ActiveLink href="/ConversationPage"> Communauté</ActiveLink>
+           
           </Typography>
           {!authUser ? authentificationSystem : <AccountAvatarNavigationLink/>}
 

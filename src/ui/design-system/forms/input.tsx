@@ -12,6 +12,7 @@ interface Props {
     required?: boolean;
     isAutocompleted?: boolean;
     label?:string;
+    value?:string;
   }
   export const Input = ({
     isLoading,
@@ -24,6 +25,7 @@ interface Props {
     required = true,
     isAutocompleted = false,
     label,
+    value,
   }: Props) => {
     return (
         <div className="space-y-2">

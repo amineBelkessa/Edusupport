@@ -15,7 +15,6 @@ export default function useFirebaseAuth() {
       });
     }
   }
-  
 
   const formatAuthUser = (user: UserInterface) => ({
     uid: user.uid,
@@ -24,25 +23,23 @@ export default function useFirebaseAuth() {
     emailVerified: user.emailVerified,
     phoneNumber: user.phoneNumber,
     photoURL: user.photoURL,
+    Message: user.Message,
+    comments:user.comments,
   });
-  
+
   const getUserDocument = async (user: UserInterface) => {
     if (auth.currentUser) {
       const documentRef = doc(db, "users", auth.currentUser.uid);
       const compactUser = user;
-      onSnapshot(documentRef, async (doc) => {
+      onSnapshot(documentRef, (doc) => {
         if (doc.exists()) {
           compactUser.userDocument = doc.data() as UserDocument;
+          setAuthUser(compactUser);
         }
-        setAuthUser((prevAuthUser)=>({
-            ...prevAuthUser,
-            ...compactUser
-      }));
         setAuthUserIsLoading(false);
       });
     }
   };
-  
 
   const authStateChanged = async (authState: UserInterface | null) => {
     if (!authState) {

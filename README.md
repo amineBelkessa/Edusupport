@@ -1,40 +1,126 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 EduSupport — Plateforme d’assistance éducative en ligne
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Frontend-Next.js%2014-blue.svg)
+![Firebase](https://img.shields.io/badge/Hosting-Firebase-orange.svg)
+![TailwindCSS](https://img.shields.io/badge/UI-TailwindCSS-06B6D4.svg)
+![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6.svg)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🌐 Démo en ligne
+
+🚀 **Application déployée :**  
+👉 [https://edusupport-7b3ca.web.app/](https://edusupport-7b3ca.web.app/)
+
+---
+
+## 🧠 Description du projet
+
+**EduSupport** est une plateforme web moderne d’assistance éducative permettant aux enseignants et apprenants d’interagir facilement.  
+Elle offre un espace intuitif pour :
+- Poster et consulter des **supports pédagogiques** 📘  
+- Suivre les **progrès des élèves** 📊  
+- Communiquer via un **système de messagerie ou commentaires** 💬  
+- Gérer les **ressources éducatives** dans un environnement centralisé et sécurisé 🔐  
+
+---
+
+## ⚙️ Technologies utilisées
+
+| Couche | Technologie |
+|--------|--------------|
+| Framework | **Next.js 14** |
+| Langage | **TypeScript** |
+| Base de données & Auth | **Firebase** |
+| Hébergement | **Firebase Hosting** |
+| UI | **TailwindCSS** |
+| Build tool | **Vite / Next build** |
+| Gestion de dépendances | **npm** |
+
+---
+
+## 📁 Structure du projet
+
+```
+edusupport/
+├── public/                 → Images et fichiers statiques
+├── src/
+│   ├── pages/              → Pages principales (Accueil, Dashboard, etc.)
+│   ├── components/         → Composants UI réutilisables
+│   ├── styles/             → Fichiers CSS / Tailwind
+│   ├── utils/              → Fonctions utilitaires
+│   └── services/           → Connexion Firebase, gestion des données
+├── firebase.json           → Configuration de déploiement Firebase
+├── package.json            → Dépendances du projet
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🧩 Installation et exécution locale
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### 1️⃣ Cloner le dépôt
+```bash
+git clone https://github.com/amineBelkessa/edusupport.git
+cd edusupport
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 2️⃣ Installer les dépendances
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 3️⃣ Lancer le projet localement
+```bash
+npm run dev
+```
 
-## Learn More
+L’application sera disponible sur :  
+👉 [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚠️ Configuration Firebase (locale)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Avant de lancer le projet, crée un fichier `.env.local` à la racine du projet et ajoute tes clés Firebase :
 
-## Deploy on Vercel
+```bash
+NEXT_PUBLIC_FIREBASE_API_KEY=ta_cle_api
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=ton-projet.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=ton-projet
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=ton-projet.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=xxxxxxx
+NEXT_PUBLIC_FIREBASE_APP_ID=1:xxxxxx:web:xxxxxx
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🧠 Fonctionnalités principales
+
+- 🔐 Authentification sécurisée via Firebase  
+- 👨‍🏫 Espace enseignant pour partager des supports  
+- 👩‍🎓 Tableau de bord élève avec suivi de progression  
+- 💬 Système de communication interne (commentaires, notifications)  
+- 📱 Design responsive avec TailwindCSS  
+- ☁️ Déploiement automatique sur Firebase Hosting  
+
+---
+
+## 📊 Lien de production
+
+Le projet est hébergé sur **Firebase Hosting** :  
+🌐 [https://edusupport-7b3ca.web.app/](https://edusupport-7b3ca.web.app/)
+
+---
+
+## 👨‍💻 Auteur
+
+**Amine Belkessa**  
+🎓 Master 2 Génie Informatique Logiciel — Université de Rouen  
+📧 amine.belkessa@univ-rouen.fr  
+🌐 [GitHub](https://github.com/amineBelkessa)
+
+---
+
+## 🪪 Licence
+Projet éducatif et démonstratif — libre d’utilisation à des fins pédagogiques.

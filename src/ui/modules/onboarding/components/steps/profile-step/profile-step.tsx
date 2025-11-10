@@ -109,7 +109,7 @@ export const ProfileStep = ({
                 component="p"
                 theme="gray"
               >
-                Dis-nous tout sur toi ! Remplis notre formulaire de présentation pour qu&apos;on puisse mieux te connaître. On veut savoir qui tu es, ce que tu fais et comment t&apos;as atterri ici. Plus on en saura sur toi, mieux on pourra personnaliser ton expérience sur notre plateforme.
+                Dis-nous tout sur toi ! Remplis notre formulaire de présentation pour qu&apos;on puisse mieux te connaître. On veut savoir qui tu es ce que tu fais et comment t&apos;as atterri ici. Plus on en saura sur toi, mieux on pourra personnaliser ton expérience sur notre plateforme.
               </Typography>
             </div>
           </div>
