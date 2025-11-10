@@ -76,7 +76,7 @@ npm run dev
 ```
 
 L’application sera disponible sur :  
-👉 [http://localhost:3000](http://localhost:3000)
+👉 [https://edusupport-7b3ca.web.app/](https://edusupport-7b3ca.web.app/)
 
 ---
 
